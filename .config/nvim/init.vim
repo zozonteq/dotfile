@@ -1,64 +1,64 @@
-"den Scripts-----------------------------
-"
-if &compatible
-  set nocompatible               " Be iMproved
-endif
+set number
+set expandtab 
+set smartindent
+set shiftwidth=4
+set softtabstop=4
+set autochdir
+set encoding=utf-8
+set fileencoding=utf-8
+set fileencodings=utf-8,cp932
+set wildmode=longest,full
+set noswapfile
+set ttimeoutlen=50
+let &fcs='eob: '
 
-" Required:
-set runtimepath+=/home/tak/.vim/dein/repos/github.com/Shougo/dein.vim
-
-" Required:
-call dein#begin('/home/tak/.vim/dein')
-
-" Let dein manage dein
-" Required:
-call dein#add('/home/tak/.vim/dein/repos/github.com/Shougo/dein.vim')
-
-" Add or remove your plugins here like this:
-"call dein#add('Shougo/neosnippet.vim')
-"call dein#add('Shougo/neosnippet-snippets')
-
-" Required:
-call dein#end()
-
-
-
-" Required:
-filetype plugin indent on
-syntax enable
-
-" If you want to install not installed plugins on startup.
-"if dein#check_install()
-"  call dein#install()
-"endif
-
-
-
-"End dein Scripts-------------------------i
-"plug.vim set up
-call plug#begin('~/.config/nvim/plugged')
-
-"Pluglist start
+call plug#begin()
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'tpope/vim-commentary'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
-"Pluglist end
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'andweeb/presence.nvim'
+Plug 'norcalli/nvim-colorizer.lua'
+" Plug 'ashisha/image.vim'
+Plug 'sheerun/vim-polyglot'
+Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 call plug#end()
-"Plug.vim set up end.
+
+
+" For Neovim 0.1.3 and 0.1.4 - https://github.com/neovim/neovim/pull/2198
+if (has('nvim'))
+  let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
+endif
+
+" For Neovim > 0.1.5 and Vim > patch 7.4.1799 - https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162
+" Based on Vim patch 7.4.1770 (`guicolors` option) - https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd
+" https://github.com/neovim/neovim/wiki/Following-HEAD#20160511
+if (has('termguicolors'))
+  set termguicolors
+endif
 
 
 
-" NERDTree SETTINGS
+" airline setting
+if !exists('g:airline_symbols')
+        let g:airline_symbols = {}
+endif
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#formatter = 'jsformatter'
+let g:airline_theme='luna'
+let g:airline_symbols.branch = '⭠'
+let g:airline_powerline_fonts=1
 nmap <C-p> <Plug>AirlineSelectPrevTab
 nmap <C-n> <Plug>AirlineSelectNextTab
-nnoremap <silent><C-e> :NERDTreeToggle<CR>
-"NERDtree end
 
+"Color Scheme
+"colorscheme material
+colorscheme iceberg
 
-"Airline setting start
-let g:airline_powerline_fonts = 1
-"Airline setting end
+" NERDTree setting
+nnoremap <F5> :NERDTreeToggle <CR>
+
+"Colorizer setting
