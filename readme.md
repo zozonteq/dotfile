@@ -2,7 +2,7 @@
 my personal dotfile.
 
 # apply
-```
-brew install chezmoi
-chezmoi apply
+```shell
+chezmoi init --apply https://github.com/zozonteq/dotfile
+chezmoi init --apply zozonteq 
 ```
