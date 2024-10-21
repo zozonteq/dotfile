@@ -1,5 +1,6 @@
 
-zinit ice wait'0'; zinit light zsh-users/zsh-completions
+zinit ice wait'!0' 
+zinit light zsh-users/zsh-completions
 autoload -Uz compinit && compinit
 
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
