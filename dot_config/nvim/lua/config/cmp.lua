@@ -14,6 +14,7 @@ cmp.setup({
   mapping = cmp.mapping.preset.insert({
     ["<S-Tab>"] = cmp.mapping.select_prev_item({ behavior = "select" }),
     ["<Tab>"] = cmp.mapping.select_next_item(),
+    ["<Cr>"] = cmp.mapping.confirm({select = true})
   }),
   sources = cmp.config.sources({
     { name = "nvim_lsp" },

@@ -1,10 +1,17 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = {"jsonls", "cssls", "html" , "denols","ts_ls",
-    "pyright","lua_ls",
+  ensure_installed = {
+    "jsonls",
+    "cssls",
+    "html" ,
+    "denols",
+    "ts_ls",
+    "pyright",
+    "lua_ls",
     "clangd",
     "rust_analyzer",
-    "markdown_oxide"
+    -- "markdown_oxide",
+    "marksman",
   }
 })
 
@@ -29,7 +36,13 @@ require("mason-lspconfig").setup_handlers {
       end
       lsp[server_name].setup{
         on_attatch = on_attatch,
-        single_file_support = true
+        single_file_support = true,
+        init_options = {
+          preferences = {
+            importModuleSpecifierPrefernce = "relative",
+            importModuleSpecifierEnding = "minimal",
+          }
+        }
       }
     else
       lsp[server_name].setup {

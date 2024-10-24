@@ -1,9 +1,28 @@
 return {
+
   "nvim-treesitter/nvim-treesitter",
+  dependencies = {
+    "nvim-treesitter/playground"
+  },
   config = function()
     require"nvim-treesitter.configs".setup{
       ensure_installed = {
-        "http", "json", "tsx", "yaml", "css", "lua", "php", "toml"
+        "http",
+        "json",
+        "tsx",
+        "yaml",
+        "css",
+        "lua",
+        "php",
+        "toml",
+        "python",
+        "bash",
+        "c",
+        "cpp",
+        "rust",
+        "html",
+        "javascript",
+        "typescript",
       },
       highlight = {
         enable = true,
