@@ -10,6 +10,7 @@ alias cls="clear"
 alias grep="rg"
 alias grepa="rga"
 alias tree="eza --icons --tree"
+alias lg="lazygit"
 
 case "$(uname)" in 
   Darwin)
