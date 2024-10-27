@@ -1,4 +1,5 @@
 # dotfiles
+![preview](img/2024-10-27-20-03-11.png)
 my personal dotfile for MacOS/linux
 # apply
 ```shell
@@ -14,7 +15,7 @@ apt install git zsh gcc neovim eza zip
 ```
 ## macos 
 ```shell
-brew install git zsh ripgrep eza 
+brew install git zsh ripgrep eza pngpaste 
 brew install bash bc coreutils gawk gh glab gsed jq nowplaying-cli
 ```
 # what inside
