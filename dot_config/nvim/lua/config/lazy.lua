@@ -34,4 +34,5 @@ vim.opt.rtp:prepend(lazypath)
 --  checker = { enabled = true },
 --})
 
+
 require("lazy").setup("plugins")
