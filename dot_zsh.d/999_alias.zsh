@@ -14,11 +14,11 @@ alias lg="lazygit"
 alias gP="git push"
 alias gp="git pull"
 alias gc="git commit"
+alias gv="gh repo view --web"
 
 case "$(uname)" in 
   Darwin)
     alias reboot="sudo shutdown -r now"
-    alias gv="git remote -v | awk '/origin.*push/ {print $2}' | xargs open"
     ;;
   Linux)
     alias reboot="sudo shutdown -r now"
