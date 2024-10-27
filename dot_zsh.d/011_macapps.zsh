@@ -5,8 +5,8 @@ if [[ "$(uname)" == "Darwin" ]]; then
     if [[ -d "$app" ]]; then
       alias_prefix="${${$(basename $app)/.app/}// /_}"
       for executables in $app/Contents/MacOS/*;do
-        alias_suffix="$(basename $executables)"
-        alias "$alias_prefix-$alias_suffix"="'$app/Contents/MacOS/$alias_suffix'"
+        alias_suffix="${$(basename $executables)// /_}"
+        alias "$alias_prefix-$alias_suffix"="'$executables'"
       done
     fi
   done
