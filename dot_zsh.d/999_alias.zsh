@@ -11,6 +11,9 @@ alias grep="rg"
 alias grepa="rga"
 alias tree="eza --icons --tree"
 alias lg="lazygit"
+alias gP="git push"
+alias gp="git pull"
+alias gc="git commit"
 
 case "$(uname)" in 
   Darwin)
