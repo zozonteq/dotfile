@@ -1,0 +1,18 @@
+abbr vi="nvim"
+abbr vim="nvim"
+
+abbr ls="eza --icons"
+abbr sl="eza --icons"
+abbr la="eza --icons --all"
+abbr al="eza --icons --all"
+abbr ll="eza --icons --long --all"
+abbr tree="eza --icons --tree"
+
+abbr grep="rg"
+abbr grepa="rga"
+
+abbr lg="lazygit"
+abbr gP="git push"
+abbr gp="git pull"
+abbr gc="git commit"
+abbr gv="gh repo view --web"

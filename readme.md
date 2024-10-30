@@ -15,7 +15,7 @@ apt install git zsh gcc neovim eza zip
 ```
 ## macos 
 ```shell
-brew install git zsh ripgrep eza pngpaste 
+brew install git zsh ripgrep eza pngpaste starship
 brew install bash bc coreutils gawk gh glab gsed jq nowplaying-cli
 ```
 # what inside
