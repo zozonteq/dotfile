@@ -1,5 +1,4 @@
 #!/bin/usr/zsh
-
 if [[ "$(uname)" == "Darwin" ]]; then
   for app in /Applications/*.app;do
     if [[ -d "$app" ]]; then
