@@ -8,5 +8,8 @@ github = "zsh-users/zsh-autosuggestions"
 [plugins.zsh-syntax-highlighting]
 github = "zsh-users/zsh-syntax-highlighting"
 
+[plugins.zsh-completions]
+github = "zsh-users/zsh-completions"
+
 [plugins.zsh-abbr]
 github = "olets/zsh-abbr"
