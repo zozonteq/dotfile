@@ -16,3 +16,5 @@ abbr gP="git push"
 abbr gp="git pull"
 abbr gc="git commit"
 abbr gv="gh repo view --web"
+
+abbr cls="clear"
