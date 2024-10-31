@@ -20,3 +20,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
     set("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", { buffer = true })
   end,
 })
+
+vim.api.nvim_create_autocmd("BufWritePost", {
+  pattern = "*/.local/share/chezmoi/*",
+  callback = function()
+    vim.api.nvim_command("!chezmoi apply")
+    require"notify"("chezmoi applied")
+  end,
+})
