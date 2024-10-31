@@ -11,9 +11,8 @@ vim.keymap.set('n', 'ge', '<cmd>lua vim.diagnostic.open_float()<CR>')
 vim.keymap.set('n', 'g]', '<cmd>lua vim.diagnostic.goto_next()<CR>')
 vim.keymap.set('n', 'g[', '<cmd>lua vim.diagnostic.goto_prev()<CR>')
 
-
 -- GUI
-vim.keymap.set("n", "<C-b>","<cmd>Neotree toggle<CR>")
+vim.keymap.set("n", "<C-t>","<cmd>Neotree toggle<CR>")
 
 --Remap space key as leader
 vim.g.mapleader = ","
