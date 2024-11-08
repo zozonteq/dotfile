@@ -23,6 +23,7 @@ return {
         "html",
         "javascript",
         "typescript",
+        "styled"
       },
       highlight = {
         enable = true,
