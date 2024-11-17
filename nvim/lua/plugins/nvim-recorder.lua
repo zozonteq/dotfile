@@ -1,5 +1,5 @@
 return {
   "chrisgrieser/nvim-recorder",
-  dependencies = "rcarriaga/nvim-notify",
+  dependencies = "rcarriga/nvim-notify",
   opts = {}
 }
