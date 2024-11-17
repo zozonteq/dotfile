@@ -118,7 +118,6 @@
   programs= {
     starship.enable = true;
     zsh.enable = true;
-    git.enable = true;
   };
 
   # Some programs need SUID wrappers, can be configured further or are

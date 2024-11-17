@@ -6,6 +6,11 @@
 	};
 	programs.home-manager.enable = true;
 	programs = {
+    git = {
+      enable = true;
+      userName = "zozonteq";
+      userEmail = "ottotak@outlook.com";
+    };
 		gh.enable = true;
 		neovim = {
 			enable = true;
