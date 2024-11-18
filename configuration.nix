@@ -100,6 +100,17 @@
     ];
   };
 
+  virtualisation.docker = {
+    enable = true;
+    enableOnBoot = true;
+  };
+  services.tailscale.enable = true;
+  networking.firewall = {
+    enable = true;
+    trustedInterfaces =   ["tailscale0"];
+    allowedUDPPorts = [config.services.tailscale.port];
+  };
+
   # Enable automatic login for the user.
   services.xserver.displayManager.autoLogin.enable = true;
   services.xserver.displayManager.autoLogin.user = "user";
@@ -145,6 +156,6 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "24.05"; # Did you read the comment?
+  system.stateVersion = "25.05"; # Did you read the comment?
 
 }

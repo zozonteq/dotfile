@@ -12,6 +12,7 @@ require("mason-lspconfig").setup({
     "rust_analyzer",
     -- "markdown_oxide",
     "marksman",
+    "nil"
   }
 })
 

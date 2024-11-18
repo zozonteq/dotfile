@@ -20,7 +20,7 @@
 			plugins = with pkgs.vimPlugins; [
 				lazy-nvim
 			];
-		};
+	 	};
 	};
 	home.packages = with pkgs; [
 		bat
@@ -28,9 +28,12 @@
 		ripgrep
 		lazygit
     gcc
+    neofetch
+    cargo
+    unzip
 	];
-    home.file."./.config/nvim" = {
-      source = ./nvim;  
-      target = ".config/nvim"; 
-    };
+  home.file."./.config/nvim" = {
+    source = ./nvim;  
+    target = ".config/nvim"; 
+  };
 }
