@@ -1,8 +1,8 @@
 return {
   "xiyaowong/transparent.nvim",
   opts = function ()
-    vim.cmd [[TransparentEnable]]
+    vim.cmd [[TransparentDisable]]
     return {}
   end,
-  priority = 100
+  priority = 1000
 }
