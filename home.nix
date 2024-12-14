@@ -31,6 +31,7 @@
     neofetch
     cargo
     unzip
+    tmux
 	];
   home.file."./.config/nvim" = {
     source = ./nvim;  
